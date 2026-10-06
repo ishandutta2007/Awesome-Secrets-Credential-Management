@@ -59,11 +59,11 @@ The table below lists leading commercial and cloud-native secrets management sol
 
 ## 💻 Open-Source GitHub Projects
 
-The open-source community provides some of the most resilient secrets management frameworks. Below, tools are categorized and sorted by **GitHub Star Count** in descending order. Each badge links directly to the repository's stargazers page.
+The open-source community provides some of the most resilient secrets management frameworks. Below, tools are categorized and sorted by **GitHub Stars_Count** in descending order. Each badge links directly to the repository's stargazers page.
 
 ### 🏛️ Core Secrets Stores & Vaults
 
-| Repository | GitHub Stars | License | Key Description |
+| Repository | GitHub_Stars | License | Key Description |
 | :--- | :--- | :--- | :--- |
 | **[HashiCorp Vault](https://github.com/hashicorp/vault)** | [![Stars](https://img.shields.io/github/stars/hashicorp/vault?style=social&color=white)](https://github.com/hashicorp/vault/stargazers) | BSL-1.1 | **The reference implementation for secrets management.** Dynamic credentials, PKI, transit encryption, and extensive plugin ecosystem. |
 | **[Infisical](https://github.com/Infisical/infisical)** | [![Stars](https://img.shields.io/github/stars/Infisical/infisical?style=social&color=white)](https://github.com/Infisical/infisical/stargazers) | MIT | **Modern developer-first secrets platform.** Features secret scanning, dynamic secrets, Access Requests, and end-to-end encryption. |
@@ -74,7 +74,7 @@ The open-source community provides some of the most resilient secrets management
 
 ### 📦 GitOps & File Encryption Tools
 
-| Repository | GitHub Stars | License | Key Description |
+| Repository | GitHub_Stars | License | Key Description |
 | :--- | :--- | :--- | :--- |
 | **[SOPS (getsops)](https://github.com/getsops/sops)** | [![Stars](https://img.shields.io/github/stars/getsops/sops?style=social&color=white)](https://github.com/getsops/sops/stargazers) | MPL-2.0 | **File-level secrets encryption.** Encrypts YAML/JSON values with KMS (AWS, GCP, Azure) or PGP/Age for GitOps workflows. |
 | **[Sealed Secrets](https://github.com/bitnami-labs/sealed-secrets)** | [![Stars](https://img.shields.io/github/stars/bitnami-labs/sealed-secrets?style=social&color=white)](https://github.com/bitnami-labs/sealed-secrets/stargazers) | Apache-2.0 | **Asymmetric encryption for Kubernetes secrets.** Allows safe storage of encrypted secrets in public Git repositories. |
@@ -86,7 +86,7 @@ The open-source community provides some of the most resilient secrets management
 
 ### ☁️ Cloud-Native & Identity Infrastructure
 
-| Repository | GitHub Stars | License | Key Description |
+| Repository | GitHub_Stars | License | Key Description |
 | :--- | :--- | :--- | :--- |
 | **[AWS Vault](https://github.com/99designs/aws-vault)** | [![Stars](https://img.shields.io/github/stars/99designs/aws-vault?style=social&color=white)](https://github.com/99designs/aws-vault/stargazers) | MIT | **Secure AWS credential storage.** Stores keys in OS keystore (Keychain/KWallet) and generates temporary STS credentials. |
 | **[External Secrets Operator](https://github.com/external-secrets/external-secrets)** | [![Stars](https://img.shields.io/github/stars/external-secrets/external-secrets?style=social&color=white)](https://github.com/external-secrets/external-secrets/stargazers) | Apache-2.0 | **Kubernetes secrets synchronizer.** Syncs secrets from AWS Secrets Manager, GCP Secret Manager, Vault, etc., into K8s Secrets. |
@@ -96,7 +96,7 @@ The open-source community provides some of the most resilient secrets management
 
 ### 🔑 Password Managers & Team Credentials
 
-| Repository | GitHub Stars | License | Key Description |
+| Repository | GitHub_Stars | License | Key Description |
 | :--- | :--- | :--- | :--- |
 | **[Vaultwarden](https://github.com/dani-garcia/vaultwarden)** | [![Stars](https://img.shields.io/github/stars/dani-garcia/vaultwarden?style=social&color=white)](https://github.com/dani-garcia/vaultwarden/stargazers) | AGPL-3.0 | **Lightweight Bitwarden server written in Rust.** Ideal for self-hosting with minimal resource overhead. |
 | **[KeePassXC](https://github.com/keepassxreboot/keepassxc)** | [![Stars](https://img.shields.io/github/stars/keepassxreboot/keepassxc?style=social&color=white)](https://github.com/keepassxreboot/keepassxc/stargazers) | GPL-2.0 / GPL-3.0 | **Cross-platform offline password manager.** Fully local, encrypted KDBX database store. |
@@ -120,7 +120,7 @@ The open-source community provides some of the most resilient secrets management
 ## 🤝 How to Contribute
 
 1. 🍴 Fork this repository.
-2. 📝 Add or update entries in `README.md` maintaining the existing tabular format and star badges.
+2. 📝 Add or update entries in `README.md` maintaining the existing tabular format and Stars_Badges.
 3. 🎯 Ensure descriptions remain objective, technical, and accurate.
 4. 🚀 Open a Pull Request with a clear summary of your additions.
 
