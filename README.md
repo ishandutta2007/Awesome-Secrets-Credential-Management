@@ -1,271 +1,150 @@
-# Awesome-Secrets-Credential-Management
+# Awesome Secrets & Credential Management Ecosystem 🔑🛡️
 
-## Top Secrets & Credential Management Ecosystem
+![Awesome Secrets & Credential Management Ecosystem Banner](assets/banner.svg)
 
+<p align="center">
+  <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a><a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?stlle=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://awesome.re/badge.svg" alt="Awesome List"/></a>
+  <a href="https://creativecommons.org/publicdomain/zero/1.0/"><img src="https://img.shields.io/badge/License-CC0_1.0-lightgrey.svg" alt="License: CC0-1.0"/></a>
+  <a href="https://github.com/ishandutta2007"><img alt="GitHub followers" src="https://img.shields.io/github/followers/ishandutta2007?label=Follow" /></a>
+</p>
 
+> 🔐 A curated list of **Secrets Management**, **Credential Rotation**, **Vault Software**, **Privileged Access Management (PAM)**, and **Cloud Security** solutions for infrastructure, CI/CD, and application workloads.
 
-**Curated List of SaaS Products & Open-Source GitHub Projects**  
-
-*Focused on Secret Stores, Credential Rotation & Self-Hosted Vaults*  
-
-**Last updated: October 2026**
-
-
-
-This repository tracks notable **commercial secrets management platforms** and **open-source projects** that securely store, rotate, and distribute credentials — API keys, database passwords, certificates, and tokens — across applications, CI/CD pipelines, and cloud infrastructure.
-
-
-
-**Examples** include AWS Secrets Manager, HashiCorp Vault, Doppler, 1Password Secrets Automation, CyberArk Conjur, Akeyless, Infisical, Azure Key Vault, Google Cloud Secret Manager, and Keeper Secrets Manager (the category leaders).
-
-
-
-**Open-source emphasis**: Secrets management is one of the strongest open-source security domains. **HashiCorp Vault** leads as the reference implementation, **Infisical** emerges as the modern developer-first alternative, **SOPS** and **Sealed Secrets** enable GitOps-native encryption, and **CyberArk Conjur OSS** brings policy-as-code. **OpenBao** provides the Linux Foundation fork of Vault. **gopass**, **Blackbox**, and **git-secret** handle Git-based secret management. This section is heavily expanded.
-
-
-
-Contributions welcome! Open a PR to add/update entries. Keep descriptions factual and link to official sites.
-
-
-
-## Table of Contents
-
-- [SaaS/Hosted Platforms](#saas-hosted-platforms)
-
-- [Open-Source GitHub Projects](#open-source-github-projects)
-
-- [How to Contribute](#how-to-contribute)
-
-- [Disclaimer](#disclaimer)
-
-
-
-## SaaS/Hosted Platforms
-
-
-
-- **[HashiCorp Vault (HCP)](https://www.hashicorp.com/products/vault)**  
-
-  **Managed HashiCorp Vault** — the full Vault feature set without running the cluster . Dynamic secrets, PKI, transit encryption, and extensive plugin ecosystem . **The reference implementation for secrets management** . **Best for enterprises wanting Vault without operational burden** .
-
-
-
-- **[AWS Secrets Manager](https://aws.amazon.com/secrets-manager/)**  
-
-  **AWS's native secrets store** — native automatic rotation for RDS, Redshift, and DocumentDB . Tight IAM integration, Lambda/ECS/EKS support, and cross-region replication . **Best for AWS-native workloads** .
-
-
-
-- **[Doppler](https://www.doppler.com/)**  
-
-  **Proprietary SaaS secrets manager** — best-in-class developer experience and broad turnkey integrations . Rotated Secrets keeps two credentials alive for zero-downtime rotation . **No self-hosted option** . **Best for teams wanting zero operational overhead** .
-
-
-
-- **[1Password Secrets Automation](https://www.1password.dev/secrets-automation)**  
-
-  **Extends 1Password's vault to infrastructure secrets** — Service Accounts (CLI) or Connect servers (self-hosted, unlimited re-requests) . **Best for 1Password users** .
-
-
-
-- **[CyberArk Conjur Enterprise](https://www.cyberark.com/)**  
-
-  **Enterprise secrets management** — policy-as-code (YAML) with strong Kubernetes authenticator using mutual TLS . **Best for enterprises with PAM requirements** .
-
-
-
-- **[Akeyless](https://www.akeyless.io/)**  
-
-  **SaaS-based platform using Distributed Fragments Cryptography (DFC)** — zero-knowledge architecture . Centralized credential management, dynamic secrets, and automatic rotation . **Best for hybrid and multi-cloud environments** .
-
-
-
-- **[Infisical (Cloud)](https://infisical.com/)**  
-
-  **Managed cloud option for the open-source Infisical platform** — developer-first with clean CLI, native SDKs, secret scanning, and dynamic secrets . **Self-hosting available** . **Best for developers wanting modern secrets management** .
-
-
-
-- **[Azure Key Vault](https://azure.microsoft.com/en-us/products/key-vault)**  
-
-  **Azure's native secrets, keys, and certificates service** — Managed Identity integration and HSM-backed keys . **Best for Azure-native workloads** .
-
-
-
-- **[Google Cloud Secret Manager](https://cloud.google.com/secret-manager)**  
-
-  **GCP's native secrets store** — automatic versioning and access logs . Deep integration with GCP Workload Identity . **Best for GCP-native workloads** .
-
-
-
-- **[Keeper Secrets Manager](https://www.keepersecurity.com/)**  
-
-  **Zero-knowledge enterprise secrets management** — SOC 2 and ISO 27001 certified with BreachWatch . **Best for compliance-focused enterprises** .
-
-
-
-## Open-Source GitHub Projects
-
-
-
-### Core Secrets Management
-
-
-
-- **[HashiCorp Vault](https://github.com/hashicorp/vault)**  
-
-  **The most capable general-purpose secrets manager**, BSL licensed with **35,800+ GitHub stars** . **Dynamic secrets (mint unique database users per request), PKI, transit encryption, and massive plugin ecosystem** . **The reference implementation for the category** . **Trade-off**: Running Vault reliably (unsealing, HA, upgrades) is a real operational job . **Best for maximum capability and enterprise-grade secrets management** .
-
-
-
-- **[OpenBao](https://github.com/openbao/openbao)**  
-
-  **Linux Foundation fork of HashiCorp Vault**, MPL-2.0 licensed . **Community-driven under open governance** — no BSL licensing concerns . **API-compatible with Vault** . **Best for organizations wanting Vault without BSL** .
-
-
-
-- **[Infisical](https://github.com/Infisical/infisical)**  
-
-  **The leading modern open-source secrets platform**, MIT licensed with **27,400+ GitHub stars** . **Self-hostable with no artificial usage caps** in the free edition . Features **dynamic secrets, secret scanning, PKI/SSH management, and Access Requests** (multi-step approval chains with auto-expiring grants) . **Developer-first CLI and SDKs** . **The de facto open-source alternative to Doppler and Vault** for modern teams . **Best for developers wanting modern UX with self-hosting** .
-
-
-
-- **[CyberArk Conjur Open Source](https://github.com/cyberark/conjur)**  
-
-  **Open-source edition of Conjur**, Apache-2.0 licensed . **Policy-as-code YAML DSL** — roles, resources, and permissions are declarative . **Kubernetes authenticator (mTLS, no pre-shared secrets)** and **JWT auth for CI/CD** . **Best for Kubernetes-native secrets management** .
-
-
-
-### GitOps & Encrypted Secrets
-
-
-
-- **[SOPS (Mozilla)](https://github.com/mozilla/sops)**  
-
-  **Secrets encryption tool that encrypts individual values within YAML/JSON files**, MPL-2.0 licensed . **Integrates with AWS KMS, GCP KMS, Azure Key Vault, and PGP** . **The standard for encrypting secrets in Git repositories** — version-controllable and diff-friendly . **Best for GitOps-native secret encryption** .
-
-
-
-- **[Sealed Secrets (Bitnami)](https://github.com/bitnami-labs/sealed-secrets)**  
-
-  **Kubernetes-specific secret encryption for GitOps**, Apache-2.0 licensed . **Encrypts secrets into SealedSecret resources** that can be stored in public version control and decrypted only within the cluster . **Best for Kubernetes GitOps** .
-
-
-
-- **[External Secrets Operator](https://github.com/external-secrets/external-secrets)**  
-
-  **Kubernetes operator that syncs secrets from external providers**, Apache-2.0 licensed . **Integrates Vault, AWS Secrets Manager, GCP Secret Manager, and more into Kubernetes Secrets** . **Best for Kubernetes secret synchronization** .
-
-
-
-- **[gopass](https://github.com/gopasspw/gopass)**  
-
-  **Terminal-based password manager using GPG or age encryption with Git synchronization**, MIT licensed . **Treats version control repositories as the primary storage backend** . **Best for team secret sharing with version history** .
-
-
-
-- **[Blackbox (StackExchange)](https://github.com/StackExchange/blackbox)**  
-
-  **GPG-based secret management for version control systems**, MIT licensed . **Encrypts files for safe storage at rest** . **Best for multi-recipient encryption** .
-
-
-
-- **[git-secret](https://github.com/sobolevn/git-secret)**  
-
-  **Bash-based CLI tool for managing sensitive files within Git repositories**, MIT licensed . **Encrypts files directly in the repo** . **Best for simple Git secret management** .
-
-
-
-### Cloud-Native & Specialized
-
-
-
-- **[aws-vault (99designs)](https://github.com/99designs/aws-vault)**  
-
-  **Secure credential manager for AWS**, MIT licensed . **Stores long-term keys in OS keystore and exchanges for short-lived temporary sessions** . **Supports MFA and AWS Identity Center SSO** . **Best for AWS credential security** .
-
-
-
-- **[SPIFFE and SPIRE](https://github.com/spiffe/spire)**  
-
-  **Standards and implementation for cryptographic workload identity**, Apache-2.0 licensed . **Provides identity foundation for secrets management in zero-trust architectures** . **Best for workload identity** .
-
-
-
-- **[Infisical Agent](https://github.com/Infisical/infisical)** — Already listed. **Sidecar agent for secret injection** .
-
-
-
-- **[Vault Secrets Operator](https://github.com/hashicorp/vault-secrets-operator)** — Kubernetes operator for Vault .
-
-
-
-### Additional Strong Open-Source Options
-
-
-
-- **Passbolt** — Open-source password manager for teams .
-
-- **KeePassXC** — Offline password manager .
-
-- **Bitwarden** — Open-source password manager with self-hosted option .
-
-- **Vaultwarden** — Lightweight Bitwarden server in Rust .
-
-- **Padloc** — Open-source password manager .
-
-- **LessPass** — Stateless password manager .
-
-- **Spectre** — Stateless password manager .
-
-- **Master Password** — Stateless password manager .
-
-
-
-**Frameworks for building custom secrets management solutions**: Choose based on deployment requirements and operational capacity. **HashiCorp Vault** for maximum capability with dynamic secrets and PKI — accept the operational burden . **Infisical** for Vault-style dynamic secrets and Access Requests without the ops weight . **OpenBao** for Vault-compatible with open governance . **SOPS + Sealed Secrets** for GitOps-native secret encryption . **Conjur Open Source** for policy-as-code and Kubernetes identity integration . **External Secrets Operator** for Kubernetes secret synchronization . For cloud-native workloads, native services (AWS Secrets Manager, Azure Key Vault, GCP Secret Manager) integrate most cleanly with their respective IAM — **but standardize on one** rather than fragmenting across three . The most secure architectural pattern: use **dynamic secrets** wherever possible (unique credential per request, short-lived) rather than static secrets that must be rotated .
-
-
-
-## How to Contribute
-
-
-
-1. Fork the repo.
-
-2. Add/edit entries in `README.md` (follow existing format).
-
-3. Include: name, link, 1–2 sentence description, and whether it's SaaS or open-source.
-
-4. Submit PR with a short explanation.
-
-
-
-Star the repo if you find it useful!
-
-
-
-## Disclaimer
-
-
-
-- This is a **community-curated** list — not exhaustive and not an endorsement.
-
-- Secrets management tools store credentials that provide access to critical systems. Self-hosted solutions require proper security hardening, backup procedures, and unsealing/HA configuration for production use.
-
-- **SaaS secrets managers introduce a third party into your secret distribution path** — trust and availability of that provider become part of your threat model . Evaluate compliance posture (SOC 2, ISO 27001) before adoption.
-
-- **License considerations**: HashiCorp Vault uses BSL (not OSI), OpenBao uses MPL-2.0, Infisical uses MIT, and Conjur uses Apache-2.0. Verify licensing against your use case before committing .
-
-- **Dynamic secrets are more secure than static secrets** — Vault and Infisical mint unique credentials per request, eliminating long-lived secrets that must be rotated. Prefer dynamic over static whenever possible .
-
-- The open-source ecosystem provides strong secret storage, rotation, and encryption foundations, but **enterprise support, compliance certifications, and managed SLAs** remain primarily commercial offerings.
-
-
+This repository tracks notable commercial **SaaS secrets management platforms** and **open-source security tools** designed to securely store, rotate, distribute, and audit credentials — including API keys 🔑, database passwords 🔐, TLS certificates 📜, SSH keys 🗝️, and access tokens 🎫 — across modern hybrid cloud and GitOps environments.
 
 ---
 
+## 📑 Table of Contents
 
+- [📊 Market Size & Industry Dynamics](#-market-size--industry-dynamics)
+- [☁️ SaaS / Commercial Products](#️-saas--commercial-products)
+- [💻 Open-Source GitHub Projects](#-open-source-github-projects)
+  - [🏛️ Core Secrets Stores & Vaults](#️-core-secrets-stores--vaults)
+  - [📦 GitOps & File Encryption Tools](#-gitops--file-encryption-tools)
+  - [☁️ Cloud-Native & Identity Infrastructure](#️-cloud-native--identity-infrastructure)
+  - [🔑 Password Managers & Team Credentials](#-password-managers--team-credentials)
+- [🏗️ Architectural Best Practices](#️-architectural-best-practices)
+- [🤝 How to Contribute](#-how-to-contribute)
+- [💖 Support & Sponsorship](#-support--sponsorship)
+- [⭐ Star History](#-star-history)
+- [⚠️ Disclaimer](#️-disclaimer)
 
-**Made for security engineers, platform teams, and organizations seeking secrets management sovereignty.**  
+---
 
-Let's make secrets and credential management more open, transparent, and secure.
+## 📊 Market Size & Industry Dynamics
+
+> 📈 **Estimated Market Size & Fragmentation**: The global Secrets Management market is estimated at **$4.22 Billion (2025)** and is projected to reach **$8.05 Billion by 2030** (CAGR ~13.8%). The sector is **moderately fragmented** — while cloud hyperscalers (AWS, Azure, GCP) and legacy enterprise leaders (Palo Alto / CyberArk, IBM / HashiCorp) hold major market share in enterprise workloads, fast-moving SaaS startups (Doppler, Infisical, Akeyless) and strong open-source ecosystems prevent a "winner-take-all" dynamic.
+
+---
+
+## ☁️ SaaS / Commercial Products
+
+The table below lists leading commercial and cloud-native secrets management solutions, sorted by **Company Size / Valuation / Revenue** in descending order.
+
+| Vendor / Product | Company Size / Valuation / Revenue | Pricing Model | Free Tier & Trial Limits | Key Features & Best Use Case |
+| :--- | :--- | :--- | :--- | :--- |
+| **[Azure Key Vault](https://azure.microsoft.com/en-us/products/key-vault)** | **$3.1 Trillion** (Microsoft Market Cap) | Pay-as-you-go (~$0.03 per 10k operations for Standard) | No permanent free tier (Included in $200 Azure free credit trial) | Hardware Security Module (HSM) option, Managed Identity integration. *Best for Azure-native workloads.* |
+| **[Google Cloud Secret Manager](https://cloud.google.com/secret-manager)** | **$2.1 Trillion** (Alphabet Market Cap) | Pay-as-you-go ($0.06/secret/mo, $0.03 per 10k operations) | **Always Free Tier**: 6 active secret versions, 10,000 access operations/month | Workload Identity federation, automatic payload versioning. *Best for GCP-native workloads.* |
+| **[AWS Secrets Manager](https://aws.amazon.com/secrets-manager/)** | **$2.0 Trillion** (Amazon Market Cap) | Pay-as-you-go ($0.40/secret/mo + $0.05 per 10k API calls) | **30-day free trial** (up to 30 secrets per account) | Built-in automatic rotation for Amazon RDS, Redshift, and DocumentDB. *Best for AWS-native workloads.* |
+| **[CyberArk Conjur Enterprise](https://www.cyberark.com/)** | **$25 Billion** (Acquired by Palo Alto Networks; $1.36B Rev) | Enterprise Quote (per identity / workload / year) | **30-day Enterprise Trial** | Policy-as-code (YAML), mTLS Kubernetes authenticator, enterprise PAM integration. *Best for enterprise compliance.* |
+| **[1Password Secrets Automation](https://www.1password.dev/secrets-automation)** | **$6.8 Billion** Valuation ($400M+ ARR) | $7.99/user/month (Business) + Connect usage | **14-day free trial** (Full Business/Enterprise plan) | Connect server, Service Account tokens, infrastructure secret isolation. *Best for teams using 1Password.* |
+| **[HashiCorp Vault (HCP Cloud)](https://www.hashicorp.com/products/vault)** | **$6.4 Billion** (Acquired by IBM; $580M Rev) | Starts at **$0.03/hour** (~$22/month for Dev tier) | **$500 HCP Free Trial Credit** for new accounts | Managed HashiCorp Vault, dynamic database credentials, PKI engine, transit encryption. *Best for enterprise Vault without ops.* |
+| **[Keeper Secrets Manager](https://www.keepersecurity.com/)** | **$225 Million+** ARR (~$60M Raised) | ~$15/user/month (Add-on to Keeper Enterprise) | **14-day free trial** (Full enterprise suite) | Zero-knowledge architecture, SOC 2 / ISO 27001 certified, BreachWatch integration. *Best for compliance-focused teams.* |
+| **[Akeyless](https://www.akeyless.io/)** | **~$80 Million** Total Raised (Series B) | Consumption-based (custom per client/API call tier) | **Free Tier**: 5 clients, 500 static secrets, 5 dynamic/rotated secrets | Distributed Fragments Cryptography (DFC), zero-knowledge SaaS secrets vault. *Best for hybrid & multi-cloud security.* |
+| **[Doppler](https://www.doppler.com/)** | **~$45 Million** Valuation ($44.5M Raised) | $8/user/month (Team tier) | **Free Developer Tier**: Up to 3 users, 10 projects, 3-day log retention | Developer-first SecretOps, zero-downtime dual-secret rotation, CLI & syncs. *Best for fast developer UX without self-hosting.* |
+| **[Infisical (Cloud)](https://infisical.com/)** | **~$50M - $100M** Valuation ($18.9M Raised) | $18/identity/month (Pro tier) | **Free Tier**: 5 identities, 3 projects, 3 environments, 100+ integrations | Managed cloud for Infisical open-source platform, Access Requests, dynamic secrets. *Best for developer-centric secrets governance.* |
+
+---
+
+## 💻 Open-Source GitHub Projects
+
+The open-source community provides some of the most resilient secrets management frameworks. Below, tools are categorized and sorted by **GitHub Star Count** in descending order. Each badge links directly to the repository's stargazers page.
+
+### 🏛️ Core Secrets Stores & Vaults
+
+| Repository | GitHub Stars | License | Key Description |
+| :--- | :--- | :--- | :--- |
+| **[HashiCorp Vault](https://github.com/hashicorp/vault)** | [![Stars](https://img.shields.io/github/stars/hashicorp/vault?style=social&color=white)](https://github.com/hashicorp/vault/stargazers) | BSL-1.1 | **The reference implementation for secrets management.** Dynamic credentials, PKI, transit encryption, and extensive plugin ecosystem. |
+| **[Infisical](https://github.com/Infisical/infisical)** | [![Stars](https://img.shields.io/github/stars/Infisical/infisical?style=social&color=white)](https://github.com/Infisical/infisical/stargazers) | MIT | **Modern developer-first secrets platform.** Features secret scanning, dynamic secrets, Access Requests, and end-to-end encryption. |
+| **[OpenBao](https://github.com/openbao/openbao)** | [![Stars](https://img.shields.io/github/stars/openbao/openbao?style=social&color=white)](https://github.com/openbao/openbao/stargazers) | MPL-2.0 | **Linux Foundation community fork of HashiCorp Vault.** Fully open-governance alternative to BSL licensing with Vault API compatibility. |
+| **[CyberArk Conjur OSS](https://github.com/cyberark/conjur)** | [![Stars](https://img.shields.io/github/stars/cyberark/conjur?style=social&color=white)](https://github.com/cyberark/conjur/stargazers) | Apache-2.0 | **Policy-as-code secrets management.** Declarative YAML policies, mTLS Kubernetes authenticator, and JWT-based CI/CD authentication. |
+
+---
+
+### 📦 GitOps & File Encryption Tools
+
+| Repository | GitHub Stars | License | Key Description |
+| :--- | :--- | :--- | :--- |
+| **[SOPS (getsops)](https://github.com/getsops/sops)** | [![Stars](https://img.shields.io/github/stars/getsops/sops?style=social&color=white)](https://github.com/getsops/sops/stargazers) | MPL-2.0 | **File-level secrets encryption.** Encrypts YAML/JSON values with KMS (AWS, GCP, Azure) or PGP/Age for GitOps workflows. |
+| **[Sealed Secrets](https://github.com/bitnami-labs/sealed-secrets)** | [![Stars](https://img.shields.io/github/stars/bitnami-labs/sealed-secrets?style=social&color=white)](https://github.com/bitnami-labs/sealed-secrets/stargazers) | Apache-2.0 | **Asymmetric encryption for Kubernetes secrets.** Allows safe storage of encrypted secrets in public Git repositories. |
+| **[gopass](https://github.com/gopasspw/gopass)** | [![Stars](https://img.shields.io/github/stars/gopasspw/gopass?style=social&color=white)](https://github.com/gopasspw/gopass/stargazers) | MIT | **Terminal password manager for teams.** Uses GPG/age encryption and Git sync for distributed credential management. |
+| **[git-secret](https://github.com/sobolevn/git-secret)** | [![Stars](https://img.shields.io/github/stars/sobolevn/git-secret?style=social&color=white)](https://github.com/sobolevn/git-secret/stargazers) | MIT | **Bash CLI to encrypt sensitive files inside Git.** Encrypts file contents using GPG for specified committers. |
+| **[Blackbox](https://github.com/StackExchange/blackbox)** | [![Stars](https://img.shields.io/github/stars/StackExchange/blackbox?style=social&color=white)](https://github.com/StackExchange/blackbox/stargazers) | MIT | **Stack Exchange tool for GPG file encryption.** Safely stores secret files in VCS repos with multi-recipient encryption. |
+
+---
+
+### ☁️ Cloud-Native & Identity Infrastructure
+
+| Repository | GitHub Stars | License | Key Description |
+| :--- | :--- | :--- | :--- |
+| **[AWS Vault](https://github.com/99designs/aws-vault)** | [![Stars](https://img.shields.io/github/stars/99designs/aws-vault?style=social&color=white)](https://github.com/99designs/aws-vault/stargazers) | MIT | **Secure AWS credential storage.** Stores keys in OS keystore (Keychain/KWallet) and generates temporary STS credentials. |
+| **[External Secrets Operator](https://github.com/external-secrets/external-secrets)** | [![Stars](https://img.shields.io/github/stars/external-secrets/external-secrets?style=social&color=white)](https://github.com/external-secrets/external-secrets/stargazers) | Apache-2.0 | **Kubernetes secrets synchronizer.** Syncs secrets from AWS Secrets Manager, GCP Secret Manager, Vault, etc., into K8s Secrets. |
+| **[SPIRE (SPIFFE)](https://github.com/spiffe/spire)** | [![Stars](https://img.shields.io/github/stars/spiffe/spire?style=social&color=white)](https://github.com/spiffe/spire/stargazers) | Apache-2.0 | **Workload identity provider.** Establishes cryptographic identity (SVIDs) across heterogeneous infrastructure for zero-trust access. |
+
+---
+
+### 🔑 Password Managers & Team Credentials
+
+| Repository | GitHub Stars | License | Key Description |
+| :--- | :--- | :--- | :--- |
+| **[Vaultwarden](https://github.com/dani-garcia/vaultwarden)** | [![Stars](https://img.shields.io/github/stars/dani-garcia/vaultwarden?style=social&color=white)](https://github.com/dani-garcia/vaultwarden/stargazers) | AGPL-3.0 | **Lightweight Bitwarden server written in Rust.** Ideal for self-hosting with minimal resource overhead. |
+| **[KeePassXC](https://github.com/keepassxreboot/keepassxc)** | [![Stars](https://img.shields.io/github/stars/keepassxreboot/keepassxc?style=social&color=white)](https://github.com/keepassxreboot/keepassxc/stargazers) | GPL-2.0 / GPL-3.0 | **Cross-platform offline password manager.** Fully local, encrypted KDBX database store. |
+| **[Bitwarden Server](https://github.com/bitwarden/server)** | [![Stars](https://img.shields.io/github/stars/bitwarden/server?style=social&color=white)](https://github.com/bitwarden/server/stargazers) | GPL-3.0 | **Official backend infrastructure for Bitwarden.** Open-source enterprise password management server. |
+| **[Passbolt API](https://github.com/passbolt/passbolt_api)** | [![Stars](https://img.shields.io/github/stars/passbolt/passbolt_api?style=social&color=white)](https://github.com/passbolt/passbolt_api/stargazers) | AGPL-3.0 | **Open-source team password manager built for DevOps.** OpenPGP-based credential sharing and API integration. |
+| **[LessPass](https://github.com/lesspass/lesspass)** | [![Stars](https://img.shields.io/github/stars/lesspass/lesspass?style=social&color=white)](https://github.com/lesspass/lesspass/stargazers) | GPL-3.0 | **Stateless password generator.** Computes unique passwords locally without sync or database storage. |
+| **[Padloc](https://github.com/padloc/padloc)** | [![Stars](https://img.shields.io/github/stars/padloc/padloc?style=social&color=white)](https://github.com/padloc/padloc/stargazers) | GPL-3.0 | **Modern open-source encrypted password manager.** Simple UI for cross-platform team credential management. |
+| **[Master Password (Lyndir)](https://github.com/Lyndir/MasterPassword)** | [![Stars](https://img.shields.io/github/stars/Lyndir/MasterPassword?style=social&color=white)](https://github.com/Lyndir/MasterPassword/stargazers) | GPL-3.0 | **Stateless password algorithm.** Generates deterministic site passwords on-demand using a master key. |
+
+---
+
+## 🏗️ Architectural Best Practices
+
+1. ⚡ **Prefer Dynamic Secrets over Static Credentials**: Dynamic secrets mint short-lived, single-use database users or cloud STS tokens per application request. This removes static credentials that require manual rotation.
+2. 🔒 **Implement GitOps-Native Secret Encryption**: Use tools like **SOPS** or **Sealed Secrets** to encrypt values before committing files into git repos. Never commit plain-text credentials.
+3. 🛡️ **Decouple Identity from Secret Storage**: Use zero-trust workload identities (**SPIFFE/SPIRE** or Cloud Workload Identity) to authenticate microservices before granting vault read privileges.
+4. ⚙️ **Standardize Secret Injection**: Standardize on Kubernetes operators like **External Secrets Operator** or sidecar injection to seamlessly pass environment secrets to application containers.
+
+---
+
+## 🤝 How to Contribute
+
+1. 🍴 Fork this repository.
+2. 📝 Add or update entries in `README.md` maintaining the existing tabular format and star badges.
+3. 🎯 Ensure descriptions remain objective, technical, and accurate.
+4. 🚀 Open a Pull Request with a clear summary of your additions.
+
+---
+
+## 💖 Support & Sponsorship
+
+Thank you for exploring this secrets management resource! If you find this curated list helpful for your security operations or engineering workflows:
+
+- ⭐ **Star this repository** to help others discover it.
+- 🔀 **Fork & Share** it with your team and security community.
+- ☕ **Sponsor / Buy Me a Coffee**: Support ongoing open-source maintenance via [GitHub Sponsors](https://github.com/sponsors/ishandutta2007).
+
+---
+
+## ⭐ Star History
+
+[![Star History Chart](https://star-history.dera.page/svg?eepos=ishandutta2007/Awesome-Secrets-Credential-Management&type=date&legend=top-left)](https://star-history.dera.page/#ishandutta2007/Awesome-Secrets-Credential-Management&type=date&legend=top-left)
+
+---
+
+## ⚠️ Disclaimer
+
+- This list is **community-curated** for educational and architectural evaluation purposes.
+- SaaS platforms introduce third-party risk into your credential path; evaluate SOC 2 Type II and ISO 27001 compliance.
+- Self-hosted vaults (HashiCorp Vault, OpenBao, Infisical) require operational hardening (unsealing protocols, HA clustering, backup retention).
+- License notice: HashiCorp Vault is under BSL-1.1; verify organizational licensing compliance before adoption.
