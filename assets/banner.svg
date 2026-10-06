@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="50%" stop-color="#1e1b4b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+
+    <!-- Glowing Accent Gradient -->
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#6366f1"/>
+      <stop offset="50%" stop-color="#a855f7"/>
+      <stop offset="100%" stop-color="#ec4899"/>
+    </linearGradient>
+
+    <!-- Shield Glow Filter -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <style>
+    .title {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      font-weight: 800;
+      font-size: 44px;
+      fill: #ffffff;
+    }
+    .subtitle {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      font-weight: 500;
+      font-size: 20px;
+      fill: #cbd5e1;
+    }
+    .badge-text {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      font-weight: 600;
+      font-size: 14px;
+      fill: #a5b4fc;
+    }
+    
+    /* Subtle Background Animation */
+    @keyframes pulse {
+      0% { opacity: 0.3; transform: scale(1); }
+      50% { opacity: 0.6; transform: scale(1.05); }
+      100% { opacity: 0.3; transform: scale(1); }
+    }
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-8px); }
+      100% { transform: translateY(0px); }
+    }
+    .bg-circle-1 {
+      animation: pulse 6s ease-in-out infinite;
+      transform-origin: 200px 150px;
+    }
+    .bg-circle-2 {
+      animation: pulse 8s ease-in-out infinite reverse;
+      transform-origin: 1000px 150px;
+    }
+    .floating-shield {
+      animation: float 4s ease-in-out infinite;
+    }
+  </style>
+
+  <!-- Background -->
+  <rect width="1200" height="300" rx="16" fill="url(#bgGrad)"/>
+
+  <!-- Dynamic Animated Background Elements (behind text) -->
+  <circle class="bg-circle-1" cx="150" cy="150" r="180" fill="#4f46e5" opacity="0.25" filter="url(#glow)"/>
+  <circle class="bg-circle-2" cx="1050" cy="150" r="220" fill="#9333ea" opacity="0.2" filter="url(#glow)"/>
+
+  <!-- Decorative Grid Lines -->
+  <path d="M 0 75 L 1200 75 M 0 150 L 1200 150 M 0 225 L 1200 225" stroke="#ffffff" stroke-opacity="0.04" stroke-width="1"/>
+  <path d="M 300 0 L 300 300 M 600 0 L 600 300 M 900 0 L 900 300" stroke="#ffffff" stroke-opacity="0.04" stroke-width="1"/>
+
+  <!-- Security Shield Graphic (Left side decoration) -->
+  <g class="floating-shield" transform="translate(80, 80)">
+    <path d="M 70 10 L 130 30 V 85 C 130 125 70 150 70 150 C 70 150 10 125 10 85 V 30 Z" fill="none" stroke="url(#accentGrad)" stroke-width="6" filter="url(#glow)"/>
+    <path d="M 70 45 L 85 75 H 105 L 90 95 L 95 125 L 70 105 L 45 125 L 50 95 L 35 75 H 55 Z" fill="#6366f1" opacity="0.8"/>
+  </g>
+
+  <!-- Title and Subtitle Text (Foreground) -->
+  <g transform="translate(240, 115)">
+    <!-- Category Tag -->
+    <rect x="0" y="-35" width="280" height="28" rx="14" fill="#312e81" stroke="#6366f1" stroke-width="1"/>
+    <text x="14" y="-16" class="badge-text">🔒 SECRETS &amp; CREDENTIAL MANAGEMENT</text>
+
+    <!-- Main Title -->
+    <text x="0" y="25" class="title">Awesome Secrets Management</text>
+
+    <!-- Subtitle -->
+    <text x="0" y="65" class="subtitle">Curated SaaS Platforms, Self-Hosted Vaults, GitOps &amp; Security Ecosystem</text>
+  </g>
+
+  <!-- Bottom Accent Bar -->
+  <rect x="0" y="292" width="1200" height="8" rx="4" fill="url(#accentGrad)"/>
+</svg>
